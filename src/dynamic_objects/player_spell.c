@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   player_spell.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lliberal <lliberal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rteles-f <rteles-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 17:51:18 by lliberal          #+#    #+#             */
-/*   Updated: 2023/11/10 17:52:40 by lliberal         ###   ########.fr       */
+/*   Updated: 2024/02/09 18:23:39 by rteles-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ void	patrono_update(t_object *object)
 			square_collision(element, -1, 0);
 		node = node->next;
 	}
+	update_sprite(object);
 	end_spell(object);
 }
 

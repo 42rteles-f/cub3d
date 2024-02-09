@@ -14,7 +14,7 @@
 
 void	power_move(t_object *object)
 {
-	if (square_collision(object, 5, 0))
+	if (square_collision(object, 3, 0))
 		list(offstage())->add(object);
 	surround_collision(object);
 }

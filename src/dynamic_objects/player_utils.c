@@ -6,7 +6,7 @@
 /*   By: rteles-f <rteles-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 17:44:30 by lliberal          #+#    #+#             */
-/*   Updated: 2023/11/10 19:30:57 by rteles-f         ###   ########.fr       */
+/*   Updated: 2024/02/09 18:27:53 by rteles-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ t_object	*new_patrono(t_object *holder)
 	patrono->end = (t_skill){5000, engine()->time};
 	patrono->collide = patrono_block;
 	patrono->move = surround_collision;
+	patrono->animation = (t_skill){100, 0};
 	patrono->update = patrono_update;
 	return (patrono);
 }

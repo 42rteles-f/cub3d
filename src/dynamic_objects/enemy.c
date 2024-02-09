@@ -43,7 +43,7 @@ void	seek_and_destroy(t_object *object, t_object *target)
 			|| (square_collision(object, -1, 0));
 	else
 	{
-		if (square_collision(object, 0, 0.5 * object->direction))
+		if (square_collision(object, 0, 0.25 * object->direction))
 			(object->direction *= -1)
 				&& (square_collision(object, 0, 1 * object->direction));
 	}
