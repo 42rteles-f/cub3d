@@ -40,10 +40,10 @@ void	create_dinamyc_object(t_object *object)
 		list(onstage())->add(engine()->player);
 	}
 	else if (id == 'D')
-		(list(onstage()))->add(new_door(object->x * SCALE + SCALE / 2,
+		list(onstage())->add(new_door(object->x * SCALE + SCALE / 2,
 			object->y * SCALE + SCALE / 2));
 	else if (id == 'A')
-		(list(onstage()))->add(new_event(object->x * SCALE + SCALE / 2,
+		list(onstage())->add(new_event(object->x * SCALE + SCALE / 2,
 			object->y * SCALE + SCALE / 2));
 }
 

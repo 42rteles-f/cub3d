@@ -20,13 +20,13 @@ void	update(t_engine *engine)
 	if (engine->time - newtime > 8)
 	{
 		newtime = engine->time;
-		(threads())->deploy((t_task){(void *)mlx_put_image_to_window,
+		threads()->deploy((t_task){(void *)mlx_put_image_to_window,
 			engine->game.mlx, engine->game.win, engine->game.canvas.img, 0, 0});
 		collection_clear(engine->on_screen);
 		list(onstage())->forEach(object_update);
-		(list(offstage()))->forEach(remove_from_list, onstage());
+		list(offstage())->forEach(remove_from_list, onstage());
 		list(offstage())->destroy();
-		(list(onstage()))->forEach(on_screen_add, engine->on_screen);
+		list(onstage())->forEach(on_screen_add, engine->on_screen);
 		ft_bubble_sort((t_render **)engine->on_screen->array,
 			engine->on_screen->index);
 		threads()->wait();

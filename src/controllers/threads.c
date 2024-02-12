@@ -6,7 +6,7 @@
 /*   By: rteles-f <rteles-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 19:03:41 by rteles-f          #+#    #+#             */
-/*   Updated: 2023/11/09 21:20:56 by rteles-f         ###   ########.fr       */
+/*   Updated: 2024/02/12 23:17:34 by rteles-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static void	end_threads(void)
 	i = 0;
 	while (i < THREADS)
 	{
-		(threads())->deploy((t_task){pthread_exit, NULL});
+		threads()->deploy((t_task){pthread_exit, NULL});
 		i++;
 	}
 	handlers = ((t_fullthreader *)threads())->all;

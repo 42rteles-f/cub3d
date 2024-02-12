@@ -6,7 +6,7 @@
 /*   By: rteles-f <rteles-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 17:54:53 by rteles-f          #+#    #+#             */
-/*   Updated: 2023/11/10 21:53:58 by rteles-f         ###   ########.fr       */
+/*   Updated: 2024/02/12 23:18:04 by rteles-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	release_dementor(t_object *event, int *pos)
 	{
 		if (matrix()->element(pos[X] + x, pos[Y] - 4)->id == 0)
 		{
-			(list(onstage()))->add(new_enemy(
+			list(onstage())->add(new_enemy(
 				(pos[X] + x) * SCALE, (pos[Y] - 4) * SCALE));
 			event->active.index--;
 			break ;
@@ -39,7 +39,7 @@ void	release_mage(t_object *event, int *pos)
 	{
 		if (matrix()->element(pos[X] + x, pos[Y] + 5)->id == 0)
 		{
-			(list(onstage()))->add(new_mage(
+			list(onstage())->add(new_mage(
 				(pos[X] + x) * SCALE, (pos[Y] + 5) * SCALE));
 			event->active.index--;
 			break ;

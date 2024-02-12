@@ -6,7 +6,7 @@
 /*   By: rteles-f <rteles-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 11:13:07 by lliberal          #+#    #+#             */
-/*   Updated: 2023/11/10 21:58:01 by rteles-f         ###   ########.fr       */
+/*   Updated: 2024/02/12 23:17:34 by rteles-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	raycast_split(t_object *object)
 	{
 		interval[i][0] = i * increment;
 		interval[i][1] = (i + 1) * increment;
-		(threads())->deploy((t_task){
+		threads()->deploy((t_task){
 			spread_ray,
 			object,
 			(void *)interval[i]});

@@ -6,7 +6,7 @@
 /*   By: rteles-f <rteles-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 19:51:53 by lliberal          #+#    #+#             */
-/*   Updated: 2023/11/10 19:18:21 by rteles-f         ###   ########.fr       */
+/*   Updated: 2024/02/12 23:17:48 by rteles-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void	end_game(char *message)
 {
 	(message) && (write(2, message, ft_strlen(message))) && (write(2, "\n", 1));
 	threads()->end();
-	(list(offstage()))->forEach(remove_from_list, onstage());
+	list(offstage())->forEach(remove_from_list, onstage());
 	list(offstage())->destroy();
 	list(onstage())->destroy();
 	collection_destroy(engine()->on_screen);
