@@ -1,2 +1,0 @@
-- fazer o parsing e perceber suas fragilidades
-	-> carregamento do mapa e  
